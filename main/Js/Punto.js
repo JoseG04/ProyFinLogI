@@ -2,31 +2,31 @@ class Punto{
     #coordenadaX;
     #coordenadaY;
     #velocidadX;
-    #VelocidadY;
+    #velocidadY;
     #estilo;
 
     constructor(x, y, velX, velY, estilo){
         this.#coordenadaX = x      || 50;
         this.#coordenadaY = y      || 50;
-        this.#velocidadX  = velX   || 1;
-        this.#VelocidadY  = velY   || 1;
-        this.#estilo      = estilo || "#FFFFFF";
+        this.#velocidadX  = velX;
+        this.#velocidadY  = velY;
+        this.#estilo      = estilo || ["color", "#FFFFFF"];
     }
 
     desplazarArriba(){
-        this.#coordenadaY -= 5 * this.#velocidadY; 
+        this.#coordenadaY -= (5 * this.#velocidadY); 
     }
 
     desplazarAbajo(){
-        this.#coordenadaY += 5 * this.#velocidadY; 
+        this.#coordenadaY += (5 * this.#velocidadY); 
     }
 
     desplazarDerecha(){
-        this.#coordenadaX += 5 * this.#velocidadX; 
+        this.#coordenadaX += (5 * this.#velocidadX); 
     }
 
     desplazarIzquierda(){
-        this.#coordenadaX -= 5 * this.#velocidadX; 
+        this.#coordenadaX -= (5 * this.#velocidadX); 
     }
 
     invertirVelX(){
@@ -34,7 +34,7 @@ class Punto{
     }
 
     invertirVelY(){
-        this.#VelocidadY = this.#VelocidadY * -1;
+        this.#velocidadY = this.#velocidadY * -1;
     }
 
     // Getters
@@ -47,11 +47,11 @@ class Punto{
     }
 
     get velocidadX(){
-        return this.#VelocidadX;
+        return this.#velocidadX;
     }
     
     get velocidadY(){
-        return this.#VelocidadY;
+        return this.#velocidadY;
     }
 
     get estilo(){
@@ -73,7 +73,7 @@ class Punto{
     }
 
     set velocidadY(velY){
-        this.#VelocidadY = velY;
+        this.#velocidadY = velY;
     }
 
     set estilo(estilo){

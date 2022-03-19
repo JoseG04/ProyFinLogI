@@ -9,20 +9,49 @@ class Juego{
         this.#estado    = "inicial";
         this.#maxRondas = 5;
         this.#ronda     = 1;
-        this.#estilo    = ["Blck", "White"];
+        this.#estilo    = ["#000", "#FFF"];
         this.#ganador   = undefined;
     }
 
-    aplicarEstilo(){
+    aplicarEstilo(ctx, canvas, fondo, ancho, alto){
+        //Aplicar los estilos del diseño
+        canvas.style.background = this.#estilo[0];
+        fondo.style.background  = this.#estilo[0];
+        
+        //Dibujar elementos del escenario(cancha)
+        ctx.beginPath();
+        ctx.fillStyle = this.#estilo[1];
+        ctx.fillRect(ancho/2 - 5, 0, 10, alto);
+        ctx.arc(ancho/2, alto/2, 60, 0, 2.0 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.fillStyle = this.#estilo[0];
+        ctx.arc(ancho/2, alto/2, 50, 0, 2.0 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
 
     }
 
     reiniciar(){
-
+        this.#ronda = 1;
+        this.#ganador = undefined;
+        this.aplicarEstilo();
     }
 
     cambiarEstadoDeJuego(){
-
+        switch (this.#estado) {
+            case "inicial":
+                this.#estado = "jugando"
+                break;
+            case "jugando":
+                    this.#estado = "pausado"
+                    break;
+            case "pausado":
+                this.#estado = "jugando"
+                break;
+        }
     }
 
     // Getters

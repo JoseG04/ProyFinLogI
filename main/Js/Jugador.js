@@ -4,7 +4,7 @@ class Jugador extends Punto{
     #alto;
     #puntaje;
 
-    constructor(nombre, x, y, velX, velY, estilo){
+    constructor(nombre, x, y, velX, velY, ancho, alto, estilo){
         super(x, y, velX, velY, estilo);
         this.#nombre  = nombre || "Jugador NN";
         this.#ancho   = ancho  || 20;
@@ -12,30 +12,15 @@ class Jugador extends Punto{
         this.#puntaje = 0;
     }
 
-    dibujar(){
-
+    dibujar(ctx){
+        ctx.beginPath();
+        ctx.fillStyle = super.estilo[1];
+        ctx.fillRect(super.coordenadaX, super.coordenadaY, this.#ancho, this.#alto);
+        ctx.closePath();
     }
 
     incrementarPuntaje(){
         this.#puntaje += 1;
-    }
-
-    //Métodos heredados
-
-    desplazarArriba(){
-        super.desplazarArriba();
-    }
-
-    desplazarAbajo(){
-        super.desplazarAbajo();
-    }
-
-    desplazarDerecha(){
-        super.desplazarDerecha();
-    }
-
-    desplazarIzquierda(){
-        super.desplazarIzquierda();
     }
 
     // Getters
