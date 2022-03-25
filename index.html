@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="icon" href="images/Icono.png">
+    <script src="https://kit.fontawesome.com/eb58f5a73f.js" crossorigin="anonymous"></script> <!-- Iconos de FontAwesome -->
+    <script src="Js/Punto.js"></script>
+    <script src="Js/Jugador.js"></script>
+    <script src="Js/Pelota.js"></script>
+    <script src="Js/Juego.js"></script>
+    <script src="Js/code.js"></script>
+    <title>Code PiPon</title>
+</head>
+<body>
+    <header>
+        <section id="elementosGenerales">
+            <article id="btnControles">
+                <button id="btnInicio" class="btnControl" title="Volver al inicio">←Inicio</button>
+                <button id="btnPausar" class="btnControl" title="Pausar">Pausa ||</button>
+            </article>
+
+            <article id="nombreJuego" class="nombreJuego">
+                <h2>CODE<br>PIPON</h2>
+            </article>
+        </section>
+    </header>
+
+    <main>
+        <section id="escenarioInicial" class="escenarioInicial">
+            <article id="nombreJuegoInicio" class="nombreJuego">
+                <h1>CODE<br>PIPON</h1>
+            </article>
+
+            <article id="registroJugadores" class="registroJugadores">
+                <form>
+                    <fieldset>
+                        <label for="nombreJugador1">Nombre Jugador 1</label><br>
+                        <input type="text" name="nombreJugador1" id="nombreJugador1"><br><br>
+                        <label for="nombreJugador2">Nombre Jugador 2</label><br>
+                        <input type="text" name="nombreJugador2" id="nombreJugador2">
+                    </fieldset>
+                </form>
+            </article>
+
+            <article id="selectorDificultad">
+                <button id="btnDificultadFacil" class="btnDificultad">Fácil</button>
+                <button id="btnDificultadMedio" class="btnDificultad">Medio</button>
+                <button id="btnDificultadDificil" class="btnDificultad">Díficil</button>
+            </article>
+
+            <article>
+                <button id="btnJugar" class="btnJugar">Jugar</button>
+            </article>
+
+            <article id="enlacesExternos">
+                <button id="btnEditorEstilos" title="Estilos"><i class="fas fa-pen"></i></button>
+                <button id="btnInstrucciones" title="Instrucciones"><i class="fas fa-gamepad"></i></button>
+                <button id="btnAcercaDe" title="Acerca de Code PiPon"><i class="fas fa-book"></i></button>
+            </article>
+        </section>
+
+        <section id="escenarioDeJuego" class="escenarioDeJuego">         
+            <article id="contadores">
+                <h2 id="puntajeJugador1">00</h2>
+                <h2 id="puntajeJugador2">00</h2>
+            </article>
+
+            <article>
+                <canvas id="canvasJuego" class="canvasJuego" width="600px" height="400px"></canvas>
+            </article>
+
+        </section>
+
+        <section id="escenarioDeEstilos" class="escenarioDeEstilos">
+            <article id="estilosJugador1" class="editorEstilos">
+                <h3 id="nombreJugador1" class="nombreDeEstilos">Jugador 1</h3>
+                <div id="contEsilosJugador1">
+                    <div id="red-jugador1" class="active" style="background-color: red;"></div>
+                    <div id="purple-jugador1" style="background-color: purple;"></div>
+                    <div id="green-jugador1" style="background-color: green;"></div>
+                    <div id="blue-jugador1" style="background-color: blue;"></div>
+                    <div id="yellow-jugador1" style="background-color: yellow;"></div>
+                    <div id="white-jugador1" style="background-color: white;"></div>
+                </div>
+            </article>
+
+            <article id="estilosJugador2" class="editorEstilos">
+                <h3 id="nombreJugador2" class="nombreDeEstilos">Jugador 2</h3>
+                <div id="contEsilosJugador2">
+                    <div id="red-jugador2" style="background-color: red;"></div>
+                    <div id="purple-jugador2" style="background-color: purple;"></div>
+                    <div id="green-jugador2" style="background-color: green;"></div>
+                    <div id="blue-jugador2" style="background-color: blue;"></div>
+                    <div id="yellow-jugador2" style="background-color: yellow;"></div>
+                    <div id="white-jugador2" style="background-color: white;"></div>
+                </div>
+            </article>
+
+            <article id="estilosPelota" class="editorEstilos">
+                <h3 id="nombrePelota" class="nombreDeEstilos">Pelota</h3>
+                <div id="contEsilosPelota">
+                    <!-- Espacio para poner los diferentes estilos disponibles -->
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

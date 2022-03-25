@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.canvasJuego{
+    background-color: black;
+    border: 3px solid white;
+    margin: 100px auto;
+}
+
+#contEsilosJugador1 div, #contEsilosJugador2 div{
+    width: 20px;
+    height: 100px;
+}
+
+#contEsilosJugador1 div.active, #contEsilosJugador2 div.active{
+    outline: solid 3px white;
+}
