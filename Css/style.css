@@ -9,8 +9,115 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+}
+
+.nombreJuego h2{
+    margin-top: 40px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 80px;
+}
+
+#btnControles{
+    position: fixed;
+    top: 15px;
+    left: 20px;
+    z-index: 3;
+}
+
+#btnControles button{
+    background-color: transparent;
+    border: none;
+    border-bottom: solid white 5px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+main{
+    margin-top: 240px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.registroJugadores fieldset{
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.registroJugadores input{
+    width: 60%;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    padding-left: 10px;
+}
+
+.selectorDificultad{
+    margin: 20px 0;
+    text-align: center;
+}
+
+.selectorDificultad button{
+    background-color: transparent;
+    margin-left: 25px;
+    font-size: 32px;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.selectorDificultad button.active{
+    border: 3px solid white;
+}
+
+.btnJugar{
+    text-align: center;
+}
+
+.btnJugar button{
+    background-color: transparent;
+    font-size: 50px;
+    border: none;
+    font-weight: 700;
+}
+
+.enlacesExternos{
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+}
+
+.enlacesExternos button{
+    background-color: transparent;
+    width: 56px;
+    height: 56px;
+    border-radius: 5px;
+    border: 2px solid white;
+    font-size: 28px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+
+
+
+
 
 .canvasJuego{
     background-color: black;

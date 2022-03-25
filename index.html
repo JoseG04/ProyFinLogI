@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Css/style.css">
     <link rel="icon" href="images/Icono.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <script src="https://kit.fontawesome.com/eb58f5a73f.js" crossorigin="anonymous"></script> <!-- Iconos de FontAwesome -->
     <script src="Js/Punto.js"></script>
     <script src="Js/Jugador.js"></script>
@@ -30,35 +34,31 @@
 
     <main>
         <section id="escenarioInicial" class="escenarioInicial">
-            <article id="nombreJuegoInicio" class="nombreJuego">
-                <h1>CODE<br>PIPON</h1>
-            </article>
-
             <article id="registroJugadores" class="registroJugadores">
                 <form>
                     <fieldset>
                         <label for="nombreJugador1">Nombre Jugador 1</label><br>
-                        <input type="text" name="nombreJugador1" id="nombreJugador1"><br><br>
+                        <input type="text" name="nombreJugador1" id="nombreJugador1" placeholder="Jugador 1"><br><br>
                         <label for="nombreJugador2">Nombre Jugador 2</label><br>
-                        <input type="text" name="nombreJugador2" id="nombreJugador2">
+                        <input type="text" name="nombreJugador2" id="nombreJugador2" placeholder="Jugador 2">
                     </fieldset>
                 </form>
             </article>
 
-            <article id="selectorDificultad">
-                <button id="btnDificultadFacil" class="btnDificultad">Fácil</button>
+            <article id="selectorDificultad" class="selectorDificultad">
+                <button id="btnDificultadFacil" class="btnDificultad active">Fácil</button>
                 <button id="btnDificultadMedio" class="btnDificultad">Medio</button>
                 <button id="btnDificultadDificil" class="btnDificultad">Díficil</button>
             </article>
 
-            <article>
-                <button id="btnJugar" class="btnJugar">Jugar</button>
+            <article class="btnJugar">
+                <button id="btnJugar">JUGAR</button>
             </article>
 
-            <article id="enlacesExternos">
+            <article id="enlacesExternos" class="enlacesExternos">
                 <button id="btnEditorEstilos" title="Estilos"><i class="fas fa-pen"></i></button>
-                <button id="btnInstrucciones" title="Instrucciones"><i class="fas fa-gamepad"></i></button>
-                <button id="btnAcercaDe" title="Acerca de Code PiPon"><i class="fas fa-book"></i></button>
+                <button id="btnInstrucciones" title="Instrucciones"><a href="/instructions/" target="_blank"><i class="fas fa-gamepad"></i></a></button>
+                <button id="btnAcercaDe" title="Acerca de Code PiPon"><a href="/history/" target="_blank"><i class="fas fa-book"></i></a></i></button>
             </article>
         </section>
 
