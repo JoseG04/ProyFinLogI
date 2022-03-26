@@ -8,8 +8,10 @@ function main(){
     let btnJugar           = document.getElementById('btnJugar');
     let btnEditorEstilos   = document.getElementById('btnEditorEstilos');
     let escenarioDeEstilos = document.getElementById('escenarioDeEstilos');
-    let canvasJuego        = document.getElementById('canvasJuego');
     let escenarioDeJuego   = document.getElementById('escenarioDeJuego');
+    let canvasJuego        = document.getElementById('canvasJuego');
+    let juegoPausado       = document.getElementById('juegoPausado');
+    let juegoTerminado     = document.getElementById('juegoTerminado');
     let ctx                = canvasJuego.getContext("2d");
     let anchoCanvas        = canvasJuego.width;
     let altoCanvas         = canvasJuego.height;
@@ -29,15 +31,9 @@ function main(){
         btnInicio.classList.add('active');
     });
 
-    btnInicio.addEventListener('click', ()=>{
-        escenarioDeEstilos.classList.remove('active');
-        escenarioDeJuego.classList.remove('active');
-        escenarioInicial.classList.add('active');
-        btnInicio.classList.remove('active');
-        btnPausar.classList.remove('active');
-        juego.estado = "inicial";
-        reiniciar();
-    });
+    btnInicio.addEventListener('click', volverAlInicio);
+
+    btnPausar.addEventListener('click', pausarJuego);
 
     selectorDificultad.addEventListener('click', (event)=>{
         if (event.path[0].classList[0] == "btnDificultad") {
@@ -114,9 +110,19 @@ function main(){
                     }
                     break;
                 case "Space":
+                    pausarJuego();
+                    break;
+                case "Enter":
                     break;
             }
             dibujarTodo();
+        }else if(juego.estado == "pausado"){
+            if (e.code == "Space") {
+                juego.cambiarEstadoDeJuego();
+                juegoPausado.classList.remove('active');
+                requestAnimationFrame(moverPelota);
+                btnPausar.disabled = false;
+            }
         }
     })
 
@@ -158,6 +164,23 @@ function main(){
         jugador1.coordenadaY = altoCanvas/2 - jugador1.alto/2;
         jugador2.coordenadaY = altoCanvas/2 - jugador2.alto/2;
         pelota.velocidadY = 0;
+    }
+
+    function pausarJuego() {
+        juegoPausado.classList.add('active');
+        juego.cambiarEstadoDeJuego();
+        cancelAnimationFrame(moverPelota);
+        btnPausar.disabled = true;
+    }
+
+    function volverAlInicio() {
+        escenarioDeEstilos.classList.remove('active');
+        escenarioDeJuego.classList.remove('active');
+        escenarioInicial.classList.add('active');
+        btnInicio.classList.remove('active');
+        btnPausar.classList.remove('active');
+        juego.estado = "inicial";
+        reiniciar();
     }
 
     function registrarJugadores() {

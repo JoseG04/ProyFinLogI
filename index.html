@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Css/style.css">
     <link rel="icon" href="images/Icono.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,9 +36,9 @@
                 <form>
                     <fieldset>
                         <label for="nombreJugador1">Nombre Jugador 1</label><br>
-                        <input type="text" name="nombreJugador1" id="nombreJugador1" maxlength="25" placeholder="Jugador 1" autocomplete="off"><br><br>
+                        <input type="text" name="nombreJugador1" id="nombreJugador1" maxlength="10" placeholder="Jugador 1" autocomplete="off"><br><br>
                         <label for="nombreJugador2">Nombre Jugador 2</label><br>
-                        <input type="text" name="nombreJugador2" id="nombreJugador2" maxlength="25" placeholder="Jugador 2" autocomplete="off">
+                        <input type="text" name="nombreJugador2" id="nombreJugador2" maxlength="10" placeholder="Jugador 2" autocomplete="off">
                     </fieldset>
                 </form>
             </article>
@@ -78,6 +76,19 @@
                 <h3 id="nomJugador2">Jugador 2</h3>
             </article>
 
+            <article id="juegoPausado" class="juegoPausado">
+                <div id="fondoJuegoPausado">
+                    <h1>PAUSA ||</h1>
+                </div>
+            </article>
+            
+            <article id="juegoTerminado" class="juegoTerminado">
+                <div id="fondoJuegoTerminado">
+                    <h1 id="mensajeJuegoTerminado">JUGADOR 1 ES EL GANADOR</h1><br>
+                    <button id="btnInicioJuegoTerminado">Volver al inicio</button><br>
+                    <button id="btnVolverAJugar">Volver a jugar</button>
+                </div>
+            </article>
         </section>
 
         <section id="escenarioDeEstilos" class="escenarioDeEstilos">

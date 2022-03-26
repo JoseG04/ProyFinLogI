@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap');
+
 *:root{
     --color-primario: #000;
     --color-secundario: #FFF;
@@ -64,6 +66,7 @@ main{
     margin-top: 240px;
     font-family: 'Roboto', sans-serif;
 }
+
 
 /* Estilos de escenario principal */
 .escenarioInicial{
@@ -140,6 +143,7 @@ main{
     cursor: pointer;
 }
 
+
 /* Estilos del escenario de juego */
 .escenarioDeJuego{
     display: none;
@@ -167,6 +171,51 @@ main{
     border: 3px solid var(--color-secundario);
 }
 
+.juegoPausado, .juegoTerminado{
+    display: none;
+}
+
+.juegoPausado.active, .juegoTerminado.active{
+    display: block;
+}
+
+#fondoJuegoPausado, #fondoJuegoTerminado{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 4;
+    gap: 10px;
+}
+
+#fondoJuegoPausado h1, #fondoJuegoTerminado h1{
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 8rem;
+}
+
+#fondoJuegoTerminado h1{
+    font-size: 7rem;
+}
+
+#fondoJuegoTerminado button{
+    background-color: transparent;
+    padding: 5px;
+    border: 3px solid var(--color-secundario);
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
 /* Estilos escenario de edición de estilos */
 .escenarioDeEstilos{
     display: none;
@@ -188,7 +237,6 @@ main{
     grid-template-columns: repeat(3, 1fr);
     gap: 35px;
 }
-
 
 #contEstilosJugador1 div, #contEstilosJugador2 div{
     width: 30px;
