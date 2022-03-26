@@ -39,15 +39,15 @@ function main(){
         reiniciar();
     });
 
-    selectorDificultad.addEventListener('click', (e)=>{
-        if (e.path[0].classList[0] == "btnDificultad") {
+    selectorDificultad.addEventListener('click', (event)=>{
+        if (event.path[0].classList[0] == "btnDificultad") {
             let btnFacil   = document.getElementById('facil');
             let btnMedio   = document.getElementById('medio');
             let btnDificil = document.getElementById('dificil');
             btnFacil.classList.remove('active');
             btnMedio.classList.remove('active');
             btnDificil.classList.remove('active');
-            switch (e.path[0].id) {
+            switch (event.path[0].id) {
                 case "facil":
                     dificultad = 0.5 * 1;
                     btnFacil.classList.add('active');
@@ -64,6 +64,30 @@ function main(){
             pelota.velocidadX = dificultad;
         }
     });
+
+    escenarioDeEstilos.addEventListener('click', (event)=>{
+        let idEstiloSelecionado;
+        let estiloSelecionado;
+        if (event.path[0].classList[0] == "modEstilo1") {
+            idEstiloSelecionado = event.path[0].id;
+            let colorSelecionado = idEstiloSelecionado.split('-');
+            estiloSelecionado = document.getElementsByClassName(event.path[0].classList[0]);
+            for (i = 0; i < estiloSelecionado.length; i++) {
+                estiloSelecionado[i].classList.remove('active');
+            }
+            document.getElementById(event.path[0].id).classList.add('active');
+            jugador1.estilo = ["color", colorSelecionado[0]];
+        }else if(event.path[0].classList[0] == "modEstilo2"){
+            idEstiloSelecionado = event.path[0].id;
+            let colorSelecionado = idEstiloSelecionado.split('-');
+            estiloSelecionado = document.getElementsByClassName(event.path[0].classList[0]);
+            for (i = 0; i < estiloSelecionado.length; i++) {
+                estiloSelecionado[i].classList.remove('active');
+            }
+            document.getElementById(event.path[0].id).classList.add('active');
+            jugador2.estilo = ["color", colorSelecionado[0]];
+        }
+    })
 
     window.addEventListener("keydown", (e)=>{
         if (juego.estado == "jugando") {
