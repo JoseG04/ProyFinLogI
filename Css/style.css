@@ -41,9 +41,12 @@ header{
 
 #btnControles{
     position: fixed;
-    top: 15px;
-    left: 20px;
+    top: 20px;
+    left: 2%;
+    width: 96%;
     z-index: 3;
+    display: flex;
+    justify-content: space-between;
 }
 
 #btnControles button{
@@ -55,7 +58,6 @@ header{
     font-size: 32px;
     font-weight: 700;
     cursor: pointer;
-    margin-right: 30px;
 }
 
 main{
@@ -63,6 +65,7 @@ main{
     font-family: 'Roboto', sans-serif;
 }
 
+/* Estilos de escenario principal */
 .escenarioInicial{
     display: none;
 }
@@ -117,6 +120,7 @@ main{
     font-size: 50px;
     border: none;
     font-weight: 700;
+    cursor: pointer;
 }
 
 .enlacesExternos{
@@ -152,14 +156,18 @@ main{
     font-size: 32px;
 }
 
+.nombresJugadores{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .canvasJuego{
     background-color: var(--color-primario);
     border: 3px solid var(--color-secundario);
 }
 
-
-
-
+/* Estilos escenario de edición de estilos */
 .escenarioDeEstilos{
     display: none;
 }

@@ -17,8 +17,8 @@ class Juego{
 
     aplicarEstilo(ctx, canvas, fondo, ancho, alto){
         //Aplicar los estilos del diseño
-        canvas.style.background = this.#estilo[0];
-        fondo.style.background  = this.#estilo[0];
+        canvas.style.backgroundColor = this.#estilo[0];
+        fondo.style.backgroundColor  = this.#estilo[0];
         
         //Dibujar elementos del escenario(cancha)
         ctx.beginPath();

@@ -38,17 +38,17 @@
                 <form>
                     <fieldset>
                         <label for="nombreJugador1">Nombre Jugador 1</label><br>
-                        <input type="text" name="nombreJugador1" id="nombreJugador1" maxlength="25" placeholder="Jugador 1"><br><br>
+                        <input type="text" name="nombreJugador1" id="nombreJugador1" maxlength="25" placeholder="Jugador 1" autocomplete="off"><br><br>
                         <label for="nombreJugador2">Nombre Jugador 2</label><br>
-                        <input type="text" name="nombreJugador2" id="nombreJugador2" maxlength="25" placeholder="Jugador 2">
+                        <input type="text" name="nombreJugador2" id="nombreJugador2" maxlength="25" placeholder="Jugador 2" autocomplete="off">
                     </fieldset>
                 </form>
             </article>
 
             <article id="selectorDificultad" class="selectorDificultad">
-                <button id="btnDificultadFacil" class="btnDificultad active">Fácil</button>
-                <button id="btnDificultadMedio" class="btnDificultad">Medio</button>
-                <button id="btnDificultadDificil" class="btnDificultad">Díficil</button>
+                <button id="facil" class="btnDificultad active">Fácil</button>
+                <button id="medio" class="btnDificultad">Medio</button>
+                <button id="dificil" class="btnDificultad">Díficil</button>
             </article>
 
             <article class="btnJugar">
@@ -64,13 +64,18 @@
 
         <section id="escenarioDeJuego" class="escenarioDeJuego">         
             <article id="contadores" class="contadores">
-                <h2 id="puntajeJugador1">00</h2>
+                <h2 id="puntajeJugador1">0</h2>
                 <h3 id="contadorRondas">RONDA 1</h3>
-                <h2 id="puntajeJugador2">00</h2>
+                <h2 id="puntajeJugador2">0</h2>
             </article>
 
             <article>
-                <canvas id="canvasJuego" class="canvasJuego" width="600px" height="400px"></canvas>
+                <canvas id="canvasJuego" class="canvasJuego" width="700px" height="400px"></canvas>
+            </article>
+
+            <article id="nombres" class="nombresJugadores">
+                <h3 id="nomJugador1">Jugador 1</h3>
+                <h3 id="nomJugador2">Jugador 2</h3>
             </article>
 
         </section>
