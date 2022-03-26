@@ -33,14 +33,14 @@
     </header>
 
     <main>
-        <section id="escenarioInicial" class="escenarioInicial">
+        <section id="escenarioInicial" class="escenarioInicial active">
             <article id="registroJugadores" class="registroJugadores">
                 <form>
                     <fieldset>
                         <label for="nombreJugador1">Nombre Jugador 1</label><br>
-                        <input type="text" name="nombreJugador1" id="nombreJugador1" placeholder="Jugador 1"><br><br>
+                        <input type="text" name="nombreJugador1" id="nombreJugador1" maxlength="25" placeholder="Jugador 1"><br><br>
                         <label for="nombreJugador2">Nombre Jugador 2</label><br>
-                        <input type="text" name="nombreJugador2" id="nombreJugador2" placeholder="Jugador 2">
+                        <input type="text" name="nombreJugador2" id="nombreJugador2" maxlength="25" placeholder="Jugador 2">
                     </fieldset>
                 </form>
             </article>
@@ -63,8 +63,9 @@
         </section>
 
         <section id="escenarioDeJuego" class="escenarioDeJuego">         
-            <article id="contadores">
+            <article id="contadores" class="contadores">
                 <h2 id="puntajeJugador1">00</h2>
+                <h3 id="contadorRondas">RONDA 1</h3>
                 <h2 id="puntajeJugador2">00</h2>
             </article>
 
@@ -76,8 +77,8 @@
 
         <section id="escenarioDeEstilos" class="escenarioDeEstilos">
             <article id="estilosJugador1" class="editorEstilos">
-                <h3 id="nombreJugador1" class="nombreDeEstilos">Jugador 1</h3>
-                <div id="contEsilosJugador1">
+                <h3 id="nombreJugador1" class="nombreDeEstilos">Jugador 1</h3><br>
+                <div id="contEstilosJugador1" class="contEstilos">
                     <div id="red-jugador1" class="active" style="background-color: red;"></div>
                     <div id="purple-jugador1" style="background-color: purple;"></div>
                     <div id="green-jugador1" style="background-color: green;"></div>
@@ -88,23 +89,23 @@
             </article>
 
             <article id="estilosJugador2" class="editorEstilos">
-                <h3 id="nombreJugador2" class="nombreDeEstilos">Jugador 2</h3>
-                <div id="contEsilosJugador2">
+                <h3 id="nombreJugador2" class="nombreDeEstilos">Jugador 2</h3><br>
+                <div id="contEstilosJugador2" class="contEstilos">
                     <div id="red-jugador2" style="background-color: red;"></div>
                     <div id="purple-jugador2" style="background-color: purple;"></div>
                     <div id="green-jugador2" style="background-color: green;"></div>
-                    <div id="blue-jugador2" style="background-color: blue;"></div>
+                    <div id="blue-jugador2" class="active" style="background-color: blue;"></div>
                     <div id="yellow-jugador2" style="background-color: yellow;"></div>
                     <div id="white-jugador2" style="background-color: white;"></div>
                 </div>
             </article>
 
-            <article id="estilosPelota" class="editorEstilos">
-                <h3 id="nombrePelota" class="nombreDeEstilos">Pelota</h3>
-                <div id="contEsilosPelota">
-                    <!-- Espacio para poner los diferentes estilos disponibles -->
+            <!-- <article id="estilosJuego" class="editorEstilos">
+                <h3 id="nombreJuego" class="nombreDeEstilos">Juego</h3><br>
+                <div id="contEstilosJuego" class="contEstilos">
+                    
                 </div>
-            </article>
+            </article> -->
         </section>
     </main>
 </body>

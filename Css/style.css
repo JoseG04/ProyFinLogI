@@ -1,11 +1,16 @@
+*:root{
+    --color-primario: #000;
+    --color-secundario: #FFF;
+}
+
 *{
     margin: 0;
     padding: 0;
-    color: white;
+    color: var(--color-secundario);
 }
 
 body{
-    background-color: black;
+    background-color: var(--color-primario);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,6 +31,14 @@ header{
     font-size: 80px;
 }
 
+#btnInicio, #btnPausar{
+    visibility: hidden;
+}
+
+#btnInicio.active, #btnPausar.active{
+    visibility: visible;
+}
+
 #btnControles{
     position: fixed;
     top: 15px;
@@ -36,7 +49,7 @@ header{
 #btnControles button{
     background-color: transparent;
     border: none;
-    border-bottom: solid white 5px;
+    border-bottom: solid var(--color-secundario) 5px;
     border-radius: 5px;
     font-family: 'Roboto', sans-serif;
     font-size: 32px;
@@ -50,6 +63,14 @@ main{
     font-family: 'Roboto', sans-serif;
 }
 
+.escenarioInicial{
+    display: none;
+}
+
+.escenarioInicial.active{
+    display: block;
+}
+
 .registroJugadores fieldset{
     border-radius: 5px;
     padding: 20px;
@@ -58,12 +79,13 @@ main{
 }
 
 .registroJugadores input{
-    width: 60%;
-    height: 30px;
+    width: 95%;
+    height: 35px;
     border-radius: 5px;
     font-size: 20px;
     font-weight: 700;
     padding-left: 10px;
+    color: var(--color-primario);
 }
 
 .selectorDificultad{
@@ -83,7 +105,7 @@ main{
 }
 
 .selectorDificultad button.active{
-    border: 3px solid white;
+    border: 3px solid var(--color-secundario);
 }
 
 .btnJugar{
@@ -108,28 +130,65 @@ main{
     width: 56px;
     height: 56px;
     border-radius: 5px;
-    border: 2px solid white;
+    border: 2px solid var(--color-secundario);
     font-size: 28px;
     margin-left: 10px;
     cursor: pointer;
 }
 
+/* Estilos del escenario de juego */
+.escenarioDeJuego{
+    display: none;
+}
 
+.escenarioDeJuego.active{
+    display: block;
+}
 
-
-
+.contadores{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 32px;
+}
 
 .canvasJuego{
-    background-color: black;
-    border: 3px solid white;
-    margin: 100px auto;
+    background-color: var(--color-primario);
+    border: 3px solid var(--color-secundario);
 }
 
-#contEsilosJugador1 div, #contEsilosJugador2 div{
-    width: 20px;
-    height: 100px;
+
+
+
+.escenarioDeEstilos{
+    display: none;
 }
 
-#contEsilosJugador1 div.active, #contEsilosJugador2 div.active{
-    outline: solid 3px white;
+.escenarioDeEstilos.active{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.contEstilos{
+    padding: 30px 40px;
+    border: 3px solid var(--color-secundario);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+
+#contEstilosJugador1 div, #contEstilosJugador2 div{
+    width: 30px;
+    height: 80px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contEstilosJugador1 div.active, #contEstilosJugador2 div.active{
+    outline: solid 3px var(--color-secundario);
 }
