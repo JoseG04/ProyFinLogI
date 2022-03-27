@@ -1,7 +1,6 @@
 class Pelota extends Punto{
     #radio;
     #sprite;
-    
 
     constructor(x, y, velX, velY, estilo){
         super(x, y, velX, velY, estilo);

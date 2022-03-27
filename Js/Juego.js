@@ -4,7 +4,6 @@ class Juego{
     #ronda;
     #dificuldad;
     #estilo;
-    #ganador;
 
     constructor(){
         this.#estado     = "inicial";
@@ -12,7 +11,6 @@ class Juego{
         this.#ronda      = 1;
         this.#dificuldad = 1;
         this.#estilo     = ["#000", "#FFF"];
-        this.#ganador    = undefined;
     }
 
     aplicarEstilo(ctx, canvas, fondo, ancho, alto){
@@ -34,12 +32,6 @@ class Juego{
         ctx.fill();
         ctx.closePath();
 
-    }
-
-    reiniciar(){
-        this.#ronda = 1;
-        this.#ganador = undefined;
-        this.aplicarEstilo();
     }
 
     cambiarEstadoDeJuego(){
@@ -81,10 +73,6 @@ class Juego{
         return this.#estilo;
     }
 
-    get ganador(){
-        return this.#ganador;
-    }
-
     // Setters
     set estado(estado){
         this.#estado = estado;
@@ -104,9 +92,5 @@ class Juego{
 
     set estilo(estilo){
         this.#estilo = estilo;
-    }
-
-    set ganador(ganador){
-        this.#ganador = ganador;
     }
 }
