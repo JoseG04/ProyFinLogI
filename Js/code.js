@@ -139,8 +139,6 @@ function main(){
                 case "Space":
                     pausarJuego();
                     break;
-                case "Enter":
-                    break;
             }
             dibujarTodo();
         }else if(juego.estado == "pausado"){
