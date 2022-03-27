@@ -95,7 +95,7 @@ main{
 }
 
 .selectorDificultad{
-    margin: 20px 0;
+    margin: 40px 0;
     text-align: center;
 }
 
@@ -111,7 +111,7 @@ main{
 }
 
 .selectorDificultad button.active{
-    border: 3px solid var(--color-secundario);
+    outline: 3px solid var(--color-secundario);
 }
 
 .btnJugar{
