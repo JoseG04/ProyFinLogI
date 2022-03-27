@@ -8,6 +8,7 @@ function main(){
     let btnJugar           = document.getElementById('btnJugar');
     let btnEditorEstilos   = document.getElementById('btnEditorEstilos');
     let escenarioDeEstilos = document.getElementById('escenarioDeEstilos');
+    let numeroDeRondas     = document.getElementById('numeroDeRondas');
     let escenarioDeJuego   = document.getElementById('escenarioDeJuego');
     let canvasJuego        = document.getElementById('canvasJuego');
     let puntajeJugador1    = document.getElementById('puntajeJugador1');
@@ -258,6 +259,7 @@ function main(){
         puntajeJugador1.innerHTML = jugadores[0].puntaje;
         puntajeJugador2.innerHTML = jugadores[1].puntaje;
         contadorRondas.innerHTML = 'RONDA ' + juego.ronda;
+        juego.maxRondas = numeroDeRondas.options[numeroDeRondas.selectedIndex].value;
     }
 
     function finalizarJuego(nombreGanador) {

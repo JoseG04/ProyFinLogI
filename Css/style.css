@@ -248,3 +248,18 @@ main{
 #contEstilosJugador1 div.active, #contEstilosJugador2 div.active{
     outline: solid 3px var(--color-secundario);
 }
+
+#estilosJuego{
+    padding: 30px;
+}
+
+#numeroDeRondas{
+    padding: 5px 10px;
+    font-size: 24px;
+    color: var(--color-primario);
+    border-radius: 5px;
+}
+
+#numeroDeRondas option{
+    color: var(--color-primario);
+}
