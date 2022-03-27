@@ -56,13 +56,17 @@ class Juego{
         }
     }
 
+    cambiarRonda(){
+        this.#ronda += 1;
+    }
+
     // Getters
     get estado(){
         return this.#estado;
     }
 
     get maxRondas(){
-        this.#maxRondas;
+        return this.#maxRondas;
     }
 
     get ronda(){
