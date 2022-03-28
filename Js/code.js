@@ -233,6 +233,7 @@ function main(){
         juego.estado = "inicial";
         juego.ronda  = 1;
         reiniciar();
+        document.exitFullscreen();
     }
 
     function registrarJugadores() {
@@ -259,6 +260,7 @@ function main(){
         puntajeJugador2.innerHTML = jugadores[1].puntaje;
         contadorRondas.innerHTML = 'RONDA ' + juego.ronda;
         juego.maxRondas = numeroDeRondas.options[numeroDeRondas.selectedIndex].value;
+        document.body.requestFullscreen();
     }
 
     function finalizarJuego(nombreGanador) {

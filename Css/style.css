@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap');
 
 *:root{
     --color-primario: #000;
@@ -90,6 +90,7 @@ main{
     width: 95%;
     height: 35px;
     border-radius: 5px;
+    font-family: var(--fuente-secundaria);
     font-size: 20px;
     font-weight: 700;
     padding-left: 10px;
@@ -104,6 +105,7 @@ main{
 .selectorDificultad button{
     background-color: transparent;
     margin-left: 25px;
+    font-family: var(--fuente-secundaria);
     font-size: 32px;
     font-weight: 700;
     padding: 5px 10px;
@@ -124,6 +126,7 @@ main{
     background-color: transparent;
     font-size: 50px;
     border: none;
+    font-family: var(--fuente-secundaria);
     font-weight: 700;
     cursor: pointer;
 }
