@@ -22,7 +22,7 @@ function main(){
     let ctx                = canvasJuego.getContext("2d");
     let anchoCanvas        = canvasJuego.width;
     let altoCanvas         = canvasJuego.height;
-    let dificultad         = 0.5;
+    let dificultad         = 0.8;
     let nombreJugador1, nombreJugador2;
 
     let juego     = new Juego();
@@ -48,20 +48,21 @@ function main(){
             let btnFacil   = document.getElementById('facil');
             let btnMedio   = document.getElementById('medio');
             let btnDificil = document.getElementById('dificil');
+            let difcultadBase = 1;
             btnFacil.classList.remove('active');
             btnMedio.classList.remove('active');
             btnDificil.classList.remove('active');
             switch (event.path[0].id) {
                 case "facil":
-                    dificultad = 0.5 * 1;
+                    dificultad = difcultadBase * 1;
                     btnFacil.classList.add('active');
                     break;
                 case "medio":
-                    dificultad = 0.5 * 2;
+                    dificultad = difcultadBase * 2;
                     btnMedio.classList.add('active');
                     break;
                 case "dificil":
-                    dificultad = 0.5 * 3;
+                    dificultad = difcultadBase * 3;
                     btnDificil.classList.add('active');
                     break;
             }
@@ -262,7 +263,7 @@ function main(){
 
     function finalizarJuego(nombreGanador) {
         juegoTerminado.classList.add('active');
-        msJuegoTerminado.innerHTML = nombreGanador.toUpperCase() + ' ES EL GANADOR';
+        msJuegoTerminado.innerHTML = nombreGanador.toUpperCase() + ' HA GANADO';
     }
 
     function random(min, max) {
