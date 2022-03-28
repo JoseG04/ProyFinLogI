@@ -242,6 +242,7 @@ function main(){
         let nomJugador1 = document.getElementById('nomJugador1');
         let nomJugador2 = document.getElementById('nomJugador2');
         if (nombreJugador1 != "" && nombreJugador2 != "") {
+            document.body.requestFullscreen();
             escenarioInicial.classList.remove('active');
             escenarioDeJuego.classList.add('active');
             btnInicio.classList.add('active');
@@ -260,7 +261,6 @@ function main(){
         puntajeJugador2.innerHTML = jugadores[1].puntaje;
         contadorRondas.innerHTML = 'RONDA ' + juego.ronda;
         juego.maxRondas = numeroDeRondas.options[numeroDeRondas.selectedIndex].value;
-        document.body.requestFullscreen();
     }
 
     function finalizarJuego(nombreGanador) {
